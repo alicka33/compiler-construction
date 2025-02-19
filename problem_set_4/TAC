@@ -1,0 +1,35 @@
+external func print(...)
+
+func fibonacci(n, l, a, b, r, i)
+	L:
+		r = a + b
+		a = b
+		b = r
+		i = i + 1
+		if i < l goto L
+	return r
+
+func main()
+	param 5
+	param 6
+	param 0
+	param 1
+	param 0
+	param 1
+
+	result = call fibonacci, 6
+
+	param "The "
+	param n
+	param "th number in the sequence is: "
+	param result
+
+	call print, 4
+
+	return 0
+
+call main, 0
+
+// print is a function that performes the concatenation of its parameters
+
+
